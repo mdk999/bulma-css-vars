@@ -1,0 +1,6 @@
+{
+  "name": "@mdk999/bulma-css-vars",
+  "version": "1.0.0",
+  "description": "Fork of Bulma CSS Vars",
+  "main": "bulma-cv-lib.sass"
+}
