@@ -1,6 +1,4 @@
 
-@import './bulma-generated/generated-fallback.css';
-@import './bulma-generated/generated-vars.sass';
-@import '../node_modules/bulma-css-vars/bulma-cv-lib';
-
-
+@use './bulma-generated/generated-fallback.css';
+@use './bulma-generated/generated-vars.sass';
+@use '../node_modules/bulma-css-vars/bulma-cv-lib';

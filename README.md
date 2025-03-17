@@ -63,9 +63,9 @@ Some more files have to be setup, which can be achieved using `node ./node_modul
 
 ```scss
 // main.scss
-@import './bulma-generated/generated-fallback.css'; // import fallbacks first, so they are overridden
-@import './bulma-generated/generated-vars.sass';
-@import '../node_modules/bulma-css-vars/bulma-cv-lib';
+@use './bulma-generated/generated-fallback.css'; // import fallbacks first, so they are overridden
+@use './bulma-generated/generated-vars.sass';
+@use '../node_modules/bulma-css-vars/bulma-cv-lib';
 ```
 
 Instead of using `bulma-cv-lib.sass`, you can also just use the bulma packages you like. Look inside the `bulma-cv-lib.sass` to understand more, and especially import `functions.sass` right after the original `functions.sass` is loaded.
@@ -139,8 +139,8 @@ If you do not use any bundler or web framework, you can also include bulma-css-v
 
 ```sass
 // app.sass
-@import './bulma-vars.sass'
-@import './node_modules/bulma-css-vars/bulma-cv-lib.sass'
+@use './bulma-vars.sass'
+@use './node_modules/bulma-css-vars/bulma-cv-lib.sass'
 ```
 
 Make sure you set `globalWebVars` to true in your `bulma-css-vars.config.js`. Then run `./node_modules/.bin/bulma-css-vars` and `sass app.sass > app.css`.
@@ -169,4 +169,3 @@ In your html:
 
 PRs are welcome!
 If you want to build this repository and try out the demo, make sure you use `yarn` and `yarn install` to install the packages in the `demo` folder. `npm` will create symlinks instead of true file copies, which might create problems on referencing relative bulma files.
-

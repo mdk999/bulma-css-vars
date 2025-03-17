@@ -216,9 +216,9 @@ module.exports = {
 
 `
 
-const defaultMainScssContent = `@import './bulma-generated/generated-fallback.css';
-@import './bulma-generated/generated-bulma-vars.sass';
-@import '../node_modules/bulma-css-vars/bulma-cv-lib';
+const defaultMainScssContent = `@use './bulma-generated/generated-fallback.css';
+@use './bulma-generated/generated-bulma-vars.sass';
+@use '../node_modules/bulma-css-vars/bulma-cv-lib';
 
 `
 

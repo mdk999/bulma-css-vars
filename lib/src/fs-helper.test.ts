@@ -3,7 +3,7 @@ jest.mock('fs')
 describe('fs helper', () => {
 
   const mockFiles = {
-    '/path/to/mock-file-1.sass': '@import "node_modules/bulma/bulma.sass"',
+    '/path/to/mock-file-1.sass': '@use "node_modules/bulma/bulma.sass"',
     '/path/to': 'this is a fake dir'
   }
 
@@ -21,8 +21,8 @@ describe('fs helper', () => {
 
   test('checks if file starts with string', async () => {
     const { fileStartsWith } = require('./fs-helper')
-    const existingFileDoesStartWith = await fileStartsWith('/path/to/mock-file-1.sass', '@import "node_modules/')
-    const nonExistingFileDoesNotStart = await fileStartsWith('/path/to/mock-file-2.sass', '@import"node_modules/')
+    const existingFileDoesStartWith = await fileStartsWith('/path/to/mock-file-1.sass', '@use "node_modules/')
+    const nonExistingFileDoesNotStart = await fileStartsWith('/path/to/mock-file-2.sass', '@use"node_modules/')
     const existingFileDoesNotStartWith = await fileStartsWith('/path/to/mock-file-1.sass', 'html {')
     expect(existingFileDoesStartWith).toBe(true)
     expect(nonExistingFileDoesNotStart).toBe(false)
